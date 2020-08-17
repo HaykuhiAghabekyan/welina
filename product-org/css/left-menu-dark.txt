@@ -1,0 +1,90 @@
+
+html -um sidebar-i mej poxel
+==============================================
+<ul class="accordion list-group">
+							<li class="accordion-card list-group-item">
+								<div class="acc-card-title active">
+									<a href="catalog.html">Скидки до 50%</a>
+
+								</div>
+
+								<ul class="accordion list-group sub-catalog">
+									<li class="accordion-card list-group-item">
+										<div class="acc-card-title">
+											<a href="catalog.html">бытовая химия</a>
+
+										</div>
+									</li>
+
+									<li class="accordion-card list-group-item">
+										<div class="acc-card-title">
+											<a href="catalog.html">сладости</a>
+
+										</div>
+
+										<ul class="accordion list-group sub-catalog">
+											<li class="accordion-card list-group-item">
+												<div class="acc-card-title">
+													<a href="product-list.html">конфеты</a>
+												</div>
+											</li>
+											<li class="accordion-card list-group-item">
+												<div class="acc-card-title">
+													<a href="product-list.html">печенья</a>
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							</li>
+						</ul>
+ =======================================================
+
+
+js-um poxel
+=======================================================
+$('.acc-card-title ').click(function () {
+  $(this).next('.sub-catalog').slideToggle(300);
+  $(this).toggleClass('isOpen');
+
+})
+
+======================================================
+css -um poxel
+=======================================================
+
+aside .list-group {
+  padding: 0 ;
+}
+aside .list-group-item:hover{
+  background: #272831f1;
+}
+aside .list-group-item {
+  color:#fff;
+  background: #272831;
+  border-bottom:.5px solid rgba(255, 255, 255, 0.521);
+  padding: 2px 2%;
+}
+aside .list-group-item:last-of-type{
+  border: none;
+}
+.isOpen a{
+  color: #dd1919;
+}
+
+======================================================
+css -um jnjel
+=======================================================
+
+.acc-card-title:hover a {
+  color: #252582
+}
+
+.acc-card-title:hover {
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+}
